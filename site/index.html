@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo"><a href="index.html"><img src="assets/logo-mine-removebg-preview.png" alt="logo-minecraft"></a></div>
+            <div class="logo"><a href="index.html"><img src="assets/fundo/logo-mine-remove.png" alt="logo-minecraft"></a></div>
             <div id="div_topic" class="topic">
                 <ul>
                     <li><a href="index.html">SOBRE</a></li>
@@ -20,45 +20,69 @@
             </div>
             <div class="dropdown">
                 <button onclick="abrirMenu()" class="dropbtn">
-                    <img src="assets/icons/profile-icon-pixel-removebg-preview.png" alt="icon-profile"> CONTA 
+                    <img src="assets/icons/profile-icon-pixel-removebg-preview.png" alt="icon-profile"> CONTA
                 </button>
                 <div id="menuConta" class="dropdown-content">
-                        <a href="login.html" class="item-entrar">ENTRAR</a>
-                        <a href="cadastro.html">CRIAR CONTA</a>
+                    <a href="login.html" class="item-entrar">ENTRAR</a>
+                    <a href="cadastro.html">CRIAR CONTA</a>
                 </div>
             </div>
-            </nav>
+        </nav>
     </header>
     <main>
-        <div id="fundo-minecraft"><img src="assets/fundo/wallpaper_minecraft_pc_bundle_2058x1440.png" alt="minecraft-bundle"  class="fundo"></div>
+        <div id="img-minecraft">
+            <img id="img1" src="assets/fundo/minecraft-bundle.png" alt="wallpaper-minecraft">
+            <div id="div-seja-bem-vindo">
+                <h1>Seja bem-vindo!</h1>
+                <div class="div-cinza-claro">
+    
+                    <span id="comentario" class="font-mine">
+                        Se você gosta de minecraft e está buscando sobre mais informações e curiosidades sobre o jogo você está no
+                        lugar certo! <br>
+                        <br>
+                        Neste site você vai encontrar tudo sobre o mundo do minecraft e as inúmeras coisas que você pode fazer dentro dele.
+                    </span>
+    
+                </div>
+            </div>
+            <img id="img2" src="assets/fundo/jogando-mine.jpg" alt="jogando-mine">
+        </div>
+        <div id="conteiner">
+            <div id="div1">
+                <div class="div-filho">
+                    <img id="img1" src="assets/livro/150px-Enchanting_Table.gif" alt="mesa-encantamento">
+                    <button class="font-mine botao-mine">Encantamentos</button>
+                </div>
+            </div>
 
-        <div class="fundo-terra">
-            <div class="conteiner">
-                <div class="fundo-cinza">
-                    <h3>Seja bem-vindo!</h3> <br><br>
-            
-                    <div class="fundo-cinza-claro">
-                        <span>
-                            Se você gosta de minecraft e está buscando sobre mais informações e curiosidades sobre o jogo você está
-                            no
-                            lugar certo!
-            
-                            Neste site você vai encontrar tudo sobre o mundo do minecraft e as inúmeras coisas que você pode fazer
-                            dentro dele.
-                        </span>
-                    </div>
-                    <div class="imagem-minecraft">
-            
-                    </div>
+            <div id="div2">
+                <div class="div-filho">
+                    <img id="img2" src="assets/poções/conjunto-pocoes-remove.png" alt="conjunto-poções"> 
+                    <button class="font-mine botao-mine">Poções</button>
+                </div>
+            </div>
+
+            <div id="div3">
+                <div class="div-filho">
+                    <img id="img3" src="assets/armadura/armadura-diamante.webp" alt="armadura-diamante">
+                    <button class="font-mine botao-mine">Armaduras</button>
                 </div>
             </div>
         </div>
-    
     </main>
     <footer>
-
+        <div>
+            <div>
+                <p>Site Desenvolvido por: Mateus Borges Galeani - 2026</p>
+            </div>
+            <ul>
+                <a href="https://github.com/galeanimateus/meu-projeto-individual">GitHub</a>
+            </ul>
+        </div>
     </footer>
-    <script>
+</body>
+</html>
+<script>
 
   function abrirMenu() {
 
@@ -86,5 +110,4 @@
     }
   }
 </script>
-</body>
-</html>
+

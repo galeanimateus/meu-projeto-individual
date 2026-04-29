@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html"><img src="assets/fundo/logo-mine-remove.png" alt="logo-minecraft"></a></div>
+            <div id="div_topic" class="topic">
+                <ul>
+                    <li><a href="index.html">SOBRE</a></li>
+                    <li><a href="quiz.html">QUIZ</a></li>
+                    <li><a href="pessoal.html">PESSOAL</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button onclick="abrirMenu()" class="dropbtn">
+                    <img src="assets/icons/profile-icon-pixel-removebg-preview.png" alt="icon-profile"> CONTA
+                </button>
+                <div id="menuConta" class="dropdown-content">
+                    <a href="login.html" class="item-entrar">ENTRAR</a>
+                    <a href="cadastro.html">CRIAR CONTA</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="div_login">
+            <div class="div-pai">
+                <div class="div-filho" id="div_login_filho">
+                    <h1>Login Usuário</h1>
+                    <div id="div_neto">
+                        <span>Usuário</span> <br>
+                        <input type="text" id="ipt_login">
+                        <br>
+                        <span>Senha</span> <br>
+                        <input type="text" id="ipt_senha">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
+<script>
+
+  function abrirMenu() {
+
+    document.getElementById("menuConta").classList.toggle("mostrar");
+
+  }
+
+ 
+  window.onclick = function(event) {
+
+    if (!event.target.matches('.dropbtn') && !event.target.closest('.dropbtn')) {
+
+      let dropdowns = document.getElementsByClassName("dropdown-content");
+
+      for (let i = 0; i < dropdowns.length; i++) {
+
+        let openDropdown = dropdowns[i];
+
+        if (openDropdown.classList.contains('mostrar')) {
+
+          openDropdown.classList.remove('mostrar');
+
+        }
+      }
+    }
+  }
+</script>
