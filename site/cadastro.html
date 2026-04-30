@@ -1,11 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MineBlog</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html"><img src="assets/fundo/logo-mine-remove.png"
+                        alt="logo-minecraft"></a></div>
+            <div id="div_topic" class="topic">
+                <ul>
+                    <li><a href="index.html">SOBRE</a></li>
+                    <li><a href="quiz.html">QUIZ</a></li>
+                    <li><a href="pessoal.html">PESSOAL</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button onclick="abrirMenu()" class="dropbtn">
+                    <img src="assets/icons/profile-icon-pixel-removebg-preview.png" alt="icon-profile"> CONTA
+                </button>
+                <div id="menuConta" class="dropdown-content">
+                    <a href="login.html" class="item-entrar">ENTRAR</a>
+                    <a href="cadastro.html">CRIAR CONTA</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main-index">
+        <div id="div_login">
+            <div id="div_pai_cadastro">
+                <div class="div-filho" id="div_login_filho">
+                    <h1>Cadastro Usuário</h1>
+                    <div id="div_neto">
+                        <span>Nome *</span> <br>
+                        <input type="text" id="ipt_nome">
+                        <div id="div_msg_erro1" class="erro"></div>
+                        <br>
+                        <span>Data Nascimento *</span> <br>
+                        <input type="date" id="ipt_dt_nascimento">
+                        <div id="div_msg_erro2" class="erro"></div>
+                        <br>
+                        <span>Email *</span> <br>
+                        <input type="text" id="ipt_email">
+                        <div id="div_msg_erro3" class="erro"></div>
+                        <br>
+                        <span>Senha *</span> <br>
+                        <input type="password" id="ipt_senha">
+                        <div id="div_msg_erro4" class="erro"></div>
+                        <br>
+                        <span>Confirmar Senha *</span> <br>
+                        <input type="password" id="ipt_confirmar_senha">
+                        <div id="div_msg_erro5" class="erro"></div>
+                        <div class="div-button" id="div_but_cad">
+                            <button class="botao-mine2" onclick="cadastrar()">Cadastrar</button>
+                            <div id="div_cad_concluido" class="concluido"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <div>
+                <p>Site Desenvolvido por: Mateus Borges Galeani - 2026</p>
+            </div>
+            <ul>
+                <a href="https://github.com/galeanimateus/meu-projeto-individual">GitHub</a>
+            </ul>
+        </div>
+    </footer>
 </body>
+
 </html>
+<script>
+
+function cadastrar(){
+
+    let  nome = ipt_nome.value   
+    let  dtNascimento = ipt_dt_nascimento.value    
+    let  email =  ipt_email.value
+    let  senha = ipt_senha.value
+    let  confirmarSenha = ipt_confirmar_senha.value
+
+    let temEspecial = /[@#$%&*!?_\-]/
+    let temNum = /[0-9]/
+    let temMaiscula = /[A-Z]/
+    let temMinuscula = /[a-z]/
+
+
+    if (nome.length < 1){
+
+        div_msg_erro1.innerHTML = `Erro: O nome deve ser maior que 1 caractere!`
+
+    } else if (dtNascimento == ``){
+
+        div_msg_erro1.innerHTML = ``
+        div_msg_erro2.innerHTML = `Erro: Adicione a data de nascimento!`
+    } 
+    
+    else if (!email.includes(`@`) || !email.includes(`.`)){
+
+        div_msg_erro2.innerHTML = ``
+        div_msg_erro3.innerHTML = `Erro: O email está sem o '@' ou '.'!`
+
+    } else if (senha.length < 8 || !temEspecial ||!temNum || !temMaiscula || !temMinuscula) {
+
+        div_msg_erro3.innerHTML = ``
+        div_msg_erro4.innerHTML = 
+        `Erro: A senha deve conter: <br>
+        - no mínimo 8 caracteres. <br>
+        - no mínimo 1 caracter especial <br>
+        (@, #, $, %, &, *, !, ?, _, -). <br>
+        - no mínimo 1 número (0 - 9). <br>
+        - no mínimo 1 letra maiúscula <br>
+        - no mínimo 1 letra minúscula`
+
+    } else if (confirmarSenha != senha){
+
+        div_msg_erro4.innerHTML = ``
+        div_msg_erro5.innerHTML = `Erro: Senhas diferentes!`
+
+    } else {
+        
+        div_msg_erro4.innerHTML = ``
+        div_msg_erro5.innerHTML = ``
+        div_cad_concluido.innerHTML = `Cadastro realizado com sucesso!`
+    }
+
+}
+
+function abrirMenu() {
+
+    document.getElementById("menuConta").classList.toggle("mostrar");
+
+  }
+
+ 
+  window.onclick = function(event) {
+
+    if (!event.target.matches('.dropbtn') && !event.target.closest('.dropbtn')) {
+
+      let dropdowns = document.getElementsByClassName("dropdown-content");
+
+      for (let i = 0; i < dropdowns.length; i++) {
+
+        let openDropdown = dropdowns[i];
+
+        if (openDropdown.classList.contains('mostrar')) {
+
+          openDropdown.classList.remove('mostrar');
+
+        }
+      }
+    }
+}
+</script>

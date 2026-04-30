@@ -125,9 +125,14 @@ a:hover{
     display: block;
 }
 
-main{
+.main-index{
 
     padding-bottom: 420px;
+}
+
+.main-login{
+
+    padding-bottom: 180px;
 }
 
 #img-minecraft{
@@ -221,6 +226,7 @@ main{
 
 .botao-mine{
 
+    font-family: 'Monocraft', monospace;
     margin-top: 20px;
     padding: 20px;
     width: 250px;
@@ -246,6 +252,37 @@ main{
 
     background-color: rgb(162, 162, 162);
 }
+
+.botao-mine2{
+    
+    font-family: 'Monocraft', monospace;
+    margin-top: 40px;
+    padding: 10px;
+    width: 250px;
+    border: 3.5px solid black;
+    background-color: #6c6c6c;
+
+    color: white;
+    text-shadow: 0px 2px 1px rgb(50, 50, 50);
+    font-weight: 400;
+    font-size: x-large;
+    box-shadow: inset 3px 3px 2px rgba(224, 222, 222, 0.464), 
+                inset -3px -5px 2px rgba(28, 28, 28, 0.271);
+    
+
+}
+
+.botao-mine2:hover{
+
+    border-color: white;
+}
+
+.botao-mine2:active{
+
+    background-color: rgb(162, 162, 162);
+}
+
+
 
 .div-filho #img1{
 
@@ -311,28 +348,94 @@ footer > p{
     justify-content: center;
 }
 
-#div_login_filho{
-
-    display: flex;
-    justify-content: space-around;
-}
-
 #div_login_filho > h1{
 
     font-family: 'Monocraft', monospace;
-    padding: 20px;
+    padding: 48px 40px 40px 40px;
     color: white;
     text-shadow: 0px 3px 1px rgb(50, 50, 50);
     font-weight: lighter;
 
 }
 
+#div_neto{
+
+    padding: 10px;
+}
+
 #div_neto > span{
 
     font-family: 'Monocraft', monospace;
     color: white;
+    font-weight: lighter;
     text-shadow: 0px 2px 1px rgb(50, 50, 50);
 }
 
+#div_neto > input{
 
+font-family: 'Monocraft', monospace;
+    padding: 0px 0px 0px 5px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    width: 300px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.677);
+    border: 3px solid white;
+    color: white;
+    user-select: none;
+    caret-shape: underscore;
+    caret-animation: manual;
+}
+
+#div_neto > input:focus{
+
+    outline: none;
+}
+
+/* CSS Tela Cadastro */
+
+#div_pai_cadastro{
+    
+    background-color: #3b3d3a;
+    width: 550px;
+    height: 840px;
+    box-shadow: 0px 5px 20px rgba(23, 23, 23, 0.478);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-button{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.erro{
+
+    font-family: 'Monocraft', monospace;
+    color: rgb(255, 0, 0);
+    font-weight: lighter;
+    font-size: x-small;
+    text-shadow: 0px 1px 1px rgb(50, 50, 50);
+}
+
+.concluido{
+
+    font-family: 'Monocraft', monospace;
+    color: rgb(26, 125, 20);
+    font-weight: lighter;
+    font-size: x-small;
+    text-shadow: 0px 1px 1px rgb(50, 50, 50);
+
+}
+
+#div_but_cad{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
